@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Peliculas</string>
+    <string name="s1">string 1</string>
+    <string name="s2">string 2</string>
+    <string name="s3">string 3</string>
+    <string name="title_activity_cartelera">Segunda Activity</string>
+</resources>
