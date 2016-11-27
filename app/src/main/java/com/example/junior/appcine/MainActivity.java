@@ -379,6 +379,7 @@ public class MainActivity extends AppCompatActivity {
         AppIndex.AppIndexApi.start(client, viewAction);
     }
 
+
     @Override
     public void onStop() {
         super.onStop();
@@ -398,7 +399,6 @@ public class MainActivity extends AppCompatActivity {
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
     }
-
 }
 
 
