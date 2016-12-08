@@ -1,6 +1,7 @@
 package com.example.junior.appcine;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -10,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -180,6 +182,23 @@ public class cartelera extends AppCompatActivity implements GoogleApiClient.Conn
             //mLastLocation.getLatitude()
             //mLastLocation.getLongitude()
         }
+        else{
+
+            // message box pidiendo que active el gps, solo se activa si el gps no esta activado
+            // y uno presiona ok y se queda ahi.
+            // --> Hacer que siga preguntando hasta que este activado
+            new AlertDialog.Builder(this)
+                    .setTitle("posicion")
+                    .setMessage("Active el gps por favor...")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // continue with delete
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }
+
     }
 
 
